@@ -1,0 +1,248 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.emoji-container {
+    display:flex;
+    justify-content: center;
+    padding: 20px;
+}
+.emoji{
+    margin:3rem;
+    font-size:15rem;
+}
+.not-visible{
+    display:none;
+}
+#circle{
+    height:30rem;
+    display:flex;
+    align-items: center;
+    flex-direction:row;
+    justify-content:space-around;
+    text-align:center;
+}
+
+#circle div{
+    user-select: none;
+    cursor: pointer;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background-color: yellowgreen;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1.2rem;
+    border-radius:5rem;
+    height:10rem;
+    width:10rem;
+    transition: cubic-bezier(0.215, 0.610, 0.355, 1) 2s;
+}
+#circle div:hover{
+   transform: scale(2);
+}
+#color1{
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 1.5rem!important;
+    font-family: cursive;
+    background-color:rgb(14, 3, 41);
+    color:white;
+    padding:4rem;
+    margin:0rem 1rem;
+}
+#color1 span{
+    font-size:2.5rem;
+}
+#color2{
+    margin:0rem 1rem;
+    height:2.2rem;
+    display:flex;
+    justify-content:space-evenly;
+    align-items:center;
+    background-color:rgb(223, 180, 194);
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size:large;
+    text-align:center;
+    letter-spacing: 1px;
+}
+#color2 span{
+    text-align:center;
+}
+#color2 button{
+    border:none;
+    background-color:white;
+    color:black;
+    height:100%;
+    padding-inline:1rem;
+    transition:all 1s;
+}
+#color2 div> button{
+    height:2.2rem;
+}
+#color2 button:hover{
+    background-color:rgb(70, 11, 70);
+    color:white;
+}
+.selected{
+    background-color:rgb(70, 11, 70)!important;
+    color:white!important;
+}
+.square-container{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding:2rem;
+    margin-inline: auto;
+    max-width:45rem;
+}
+.square{
+    width: 8rem;
+    height: 8rem;
+    border-radius:1rem ;
+    margin:1.5rem;
+}
+.calci{
+    text-align:center;
+    margin:auto;
+    text-align:center;
+    padding: 2rem; 
+}
+.calci-container{
+    display:inline-block;
+    background-color:rgb(88, 68, 40);
+    padding:1.6rem;
+    border-radius:20px;
+}
+#output{
+    width:24rem;
+    padding:0.5rem 0.5rem;
+    border-radius:20px;
+    margin:0.5rem;
+    background-color: black;
+    color:white;
+    text-align: right;
+    font-size:2rem;
+}
+.keys{
+    margin:auto;
+}
+.keys td>button{
+    font-size:1.5rem;
+    font-weight:bold;
+    width:5.5rem;
+    padding:1rem;
+    text-align:center;
+    margin:0.1rem;
+    border-radius:20px;
+}
+.tlight button{
+    background:whitesmoke;
+}
+.tdark button{
+    background:wheat;
+}
+.music{
+    padding:5rem 0rem;
+    background-color:rgb(40, 105, 107);
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+.keyboard button{
+    border: none;
+    border-radius:12px;
+    padding:0.5rem;
+    margin:0.5rem;
+    font-weight:bold;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.key-press{
+    color:white;
+    background-color:rgb(6, 35, 88);
+}
+.piano-keys{
+    margin:2.5rem auto;
+    display:flex; 
+}
+.white{
+    --height:30vw;
+    width:calc(var(--height)/4);
+    height: var(--height);
+    background-color:white;
+    border:1px solid rgb(48, 3, 3);
+}
+.black{
+    --height:16vw;
+    width:calc(var(--height)/4);
+    height: var(--height);
+    background-color:rgb(0, 0, 0);
+    margin-left: calc(var(--height)/-8);
+    margin-right: calc(var(--height)/-8);
+    z-index: 1;
+}
+.keym{
+    display:flex;
+    justify-content: center;
+    align-items:flex-end;
+    font-size:20px;
+}
+.keym.white span{
+    margin-bottom: 12px;;
+}
+.keym.black span{
+    color:white;
+    margin-bottom: 12px;;
+}
+.white.active{
+    background-color:rgb(199, 197, 197);
+}
+.black.active{
+    background-color:rgb(44, 44, 44);
+}
+.sip{
+    border: 2px solid rgb(4, 76, 105);
+    border-radius:20px;
+    background-color:rgb(45, 184, 226);
+}
+.sip h2{
+    text-align:center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight:bold;
+    font-size: 30px!important;
+    margin:2rem;
+}
+.sip-form{
+    margin:2rem;
+}
+.sip-form p{
+    margin-bottom:3px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight:500;
+}
+.sip-form input{
+    padding:5px 6px;
+    border-radius:12px;
+    width:100%;
+}
+.sip .button{
+    width:100%;
+    padding:2rem;
+}
+.sip button{
+    width:100%;
+    padding:0.5rem;
+    text-align:center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight:bold;
+    font-size:20px;
+    background-color:rgb(7, 63, 100);
+    color:white;
+    border:none;
+    border-radius:12px;
+}
+#resultsip{
+    font-size: 35px;
+    font-weight:bold;
+    text-align: center;
+    margin-top: -25px;
+}

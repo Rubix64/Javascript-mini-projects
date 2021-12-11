@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+  <title>Having fun!</title>
+
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Having fun!</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Dropdown
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+  <div class="d-flex justify-content-center">
+    <h1 class="my-4">DO what you love!!</h1>
+  </div>
+  <hr class="m-auto" style="height:5px!important;width: 80vw;">
+  <div class="card text-center my-4 mx-5">
+    <div class="card-header p-3 bg-secondary">
+    </div>
+    <div class="card-body bg-dark text-white">
+      <h5 class="card-title" id="card"></h5>
+
+
+    </div>
+    <div class="card-footer bg-secondary text-muted py-3">
+    </div>
+  </div>
+  <hr class="m-auto" style="height:5px!important;width: 80vw;">
+  <div class="my-4 mx-5" style="font-family:cursive;">
+
+    <i class="fa fa-check-square-o my-4 fs-2" aria-hidden="true" style="height:20px;"><span
+        style="font-family:cursive;"> To-do list...</span></i>
+    <div class="mb-3 my-4 ">
+      <!-- <label for="exampleFormControlTextarea1" class="form-label">Type ur </label> -->
+      <textarea class="form-control" id="checklist" placeholder="Type ur to do plan here..." rows="2"></textarea>
+      <div class="col-auto">
+        <button type="submit" id="Add" class="btn btn-primary mb-3 my-4 border-0" style="background-color: purple;">Add
+          to the checklist :)</button>
+        <button type="submit" id="clear" onclick="clearall()" class="btn btn-primary mb-3 my-4 border-0"
+          style="background-color: rgb(226, 2, 126);">Clear all!</button>
+      </div>
+    </div>
+
+  </div>
+  <div class="my-4 mx-5">
+    <h2 class="text-center" style="font-family: cursive;">Ur Checklist...</h2>
+    <hr class="m-auto" style="height:5px!important;width: 90vw;">
+    <ul class="list-group" id="list" style="font-family: cursive;">
+
+
+    </ul>
+  </div>
+  <hr class="m-auto my-4" style="height:5px!important;width: 80vw;">
+  <div class="emoji-container">
+    <span class="emoji girl">👩‍🦱</span>
+    <span class="emoji scary not-visible">👹</span>
+  </div>
+  <hr class="m-auto my-4" style="height:5px!important;width: 80vw;">
+  <div id="circle"></div>
+  <hr class="m-auto my-4" style="height:5px!important;width: 80vw;">
+  <div class="mx-5 " id="color1">
+    <p>
+      Guess the color:)<br>
+      <span id="rgb"></span><br>
+      Select one!
+    </p>
+  </div>
+  <div class="mx-5" id="color2">
+    <button id="reset">Reset</button>
+    <span id="message"></span>
+    <div>
+      <button class="selected" id="easybtn">Easy</button>
+      <button id="hardbtn">Hard</button>
+    </div>
+  </div>
+  <div class="square-container">
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+  </div>
+  <hr class="m-auto my-4" style="height:5px!important;width: 80vw;">
+  <div class="calci">
+    <div class="calci-container">
+      <input type="text" name="output" id="output">
+      <table class="keys">
+        <tr>
+          <td class="tdark"><button>(</button></td>
+          <td class="tdark"><button>)</button></td>
+          <td class="tdark"><button>%</button></td>
+          <td class="tdark"><button>AC</button></td>
+        </tr>
+        <tr>
+          <td class="tlight"><button>7</button></td>
+          <td class="tlight"><button>8</button></td>
+          <td class="tlight"><button>9</button></td>
+          <td class="tdark"><button>/</button></td>
+        </tr>
+        <tr>
+          <td class="tlight"><button>4</button></td>
+          <td class="tlight"><button>5</button></td>
+          <td class="tlight"><button>6</button></td>
+          <td class="tdark"><button>x</button></td>
+        </tr>
+        <tr>
+          <td class="tlight"><button>1</button></td>
+          <td class="tlight"><button>2</button></td>
+          <td class="tlight"><button>3</button></td>
+          <td class="tdark"><button>-</button></td>
+        </tr>
+        <tr>
+          <td class="tlight"><button>0</button></td>
+          <td class="tlight"><button>.</button></td>
+          <td class="tdark"><button>=</button></td>
+          <td class="tdark"><button>+</button></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <hr class="m-auto my-4" style="height:5px!important;width: 80vw;">
+  <div class="music">
+    <div class="keyboard">
+      <button>Keyboard On</button>
+      <button class="key-press">Keyboard Off</button>
+    </div>
+    <div class="piano-keys">
+      <div data-note="C" class="keym white"></div>
+      <div data-note="Db" class="keym black"></div>
+      <div data-note="D" class="keym white"></div>
+      <div data-note="Eb" class="keym black"></div>
+      <div data-note="E" class="keym white"></div>
+      <div data-note="F" class="keym white"></div>
+      <div data-note="Gb" class="keym black"></div>
+      <div data-note="G" class="keym white"></div>
+      <div data-note="Ab" class="keym black"></div>
+      <div data-note="A" class="keym white"></div>
+      <div data-note="Bb" class="keym black"></div>
+      <div data-note="B" class="keym white"></div>
+    </div>
+    <div class="audio">
+      <audio id="C" src="notes/C.mp3"></audio>
+      <audio id="Db" src="notes/Db.mp3"></audio>
+      <audio id="D" src="notes/D.mp3"></audio>
+      <audio id="Eb" src="notes/Eb.mp3"></audio>
+      <audio id="E" src="notes/E.mp3"></audio>
+      <audio id="F" src="notes/F.mp3"></audio>
+      <audio id="Gb" src="notes/Gb.mp3"></audio>
+      <audio id="G" src="notes/G.mp3"></audio>
+      <audio id="Ab" src="notes/Ab.mp3"></audio>
+      <audio id="A" src="notes/A.mp3"></audio>
+      <audio id="Bb" src="notes/Bb.mp3"></audio>
+      <audio id="B" src="notes/B.mp3"></audio>
+    </div>
+  </div>
+
+
+  <hr class="m-auto my-4" style="height:5px!important;width: 80vw;">
+  <div class="mx-5 sip">
+
+    <!-- Simple compound calc -->
+    
+    <h2>SIP Compound interest Calculator</h2>
+    <div class="sip-form">
+      <p>Principle:</p>
+      <input type="number" name="principle" id="principle">
+    </div>
+    <div class="sip-form">
+      <p>Rate of Interest:</p>
+      <input type="number" name="interest" id="interest">
+    </div>
+    <div class="sip-form">
+      <p>Number of Periods:</p>
+      <input type="number" name="periods" id="periods">
+    </div>
+    <div class="button"><button>Calculate</button></div>
+    <h2>Result:</h2>
+    <p id="resultsip">0</p>
+  </div>
+  <hr class="m-auto my-4" style="height:5px!important;width: 80vw;">
+  <!-- Optional JavaScript; choose one of the two! -->
+
+  <!-- Option 1: Bootstrap Bundle with Popper -->
+  <script rel="stylesheet" type="text/javascript" src="main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
+  <!-- Option 2: Separate Popper and Bootstrap JS -->
+  <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+
+</body>
+
+</html>
